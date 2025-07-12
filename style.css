@@ -20,6 +20,8 @@
   --gap-3: 3rem;
   --gap-4: 4rem;
   --gap-4-5: 4.5rem;
+
+  --border-radius: 12px;
 }
 /*Reset*/
 /* 1. Use a more-intuitive box-sizing model */
@@ -178,6 +180,8 @@ body {
 .hero-main__img-wrapper {
   grid-column: 2/-1;
   max-width: 600px;
+  border-radius: var(--border-radius);
+  overflow: hidden;
 }
 button {
   padding: 1rem 2.5rem;
@@ -210,6 +214,7 @@ button {
   grid-column: 1/3;
   position: relative;
   overflow: hidden;
+  border-radius: var(--border-radius);
 }
 .feature-highlight__image-wrapper-orange :before {
   content: "";
@@ -227,6 +232,8 @@ button {
 }
 .feature-highlight__image-wrapper-desk {
   grid-column: 3/-2;
+  border-radius: var(--border-radius);
+  overflow: hidden;
 }
 
 .feature-highlight__image-wrapper-orange picture,
@@ -400,9 +407,9 @@ button {
   }
   .feature-highlight-body {
     grid-row-start: 2;
-    grid-column-start: 1;
+    grid-column: 1/-1;
     text-align: left;
-    align-items: start;
+    align-self: start;
   }
   .feature-list__items {
     grid-template-columns: repeat(4, 1fr);
